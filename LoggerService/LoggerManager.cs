@@ -8,7 +8,7 @@ namespace LoggerService
     // before injecting into startup class
     public class LoggerManager : ILoggerManager
     {
-        private static ILogger logger = LogManager.GetCurrentClassLogger();
+        private static readonly ILogger logger = LogManager.GetCurrentClassLogger();
 
         public void LogDebug(string message)
         {

@@ -1,0 +1,2 @@
+2020-01-29 00:14:22.5822 ERROR Something went wrong Invalid object name 'BucketList'.
+2020-01-29 00:31:51.1472 INFO Returned all Buckets available in DB

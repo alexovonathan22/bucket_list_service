@@ -1,11 +1,16 @@
 ﻿using Contracts;
+using Repository;
 using LoggerService;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Configuration;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Entities;
 
 namespace BucketListService.Extensions
 {
@@ -36,6 +41,20 @@ namespace BucketListService.Extensions
             services.AddSingleton<ILoggerManager, LoggerManager>();
         }
 
-    }
+        //service for our connString
+ 
+ 
+        public static void ConfigureMSSqlContext(this IServiceCollection services, IConfiguration Configuration)
+        {
+            //var connectionString = Configuration.GetConnectionString("sqlConnection");
+            services.AddDbContext<RepositoryContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("sqlConnection")));
+        }
+
+        //ConfigureRepositoryWrapper
+        public static void ConfigureRepositoryWrapper(this IServiceCollection services)
+        {
+            services.AddScoped<IRepositoryWrapper, RepositoryWrapper>();
+        }
+}
 
 }
