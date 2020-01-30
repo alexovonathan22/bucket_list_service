@@ -6,8 +6,8 @@ namespace Contracts
 {
     public interface IRepositoryWrapper
     {
-        IBucketListRepository BucketList { get; }
-        IItemRepository Item { get; }
+        IBucketListRepository BucketListWrapper { get; }
+        IItemRepository ItemWrapper { get; }
         void Save();
     }
 }

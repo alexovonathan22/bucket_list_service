@@ -21,8 +21,8 @@ namespace BucketListService.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            var items = _repositoryWrapper.Item.FindByCondition(x => x.Item_Name.Equals("Love God"));
-            var buckets = _repositoryWrapper.BucketList.FindAll();
+            var items = _repositoryWrapper.ItemWrapper.FindByCondition(x => x.Item_Name.Equals("Love God"));
+            var buckets = _repositoryWrapper.BucketListWrapper.FindAll();
 
             return new string[] { "value1", "value2" };
         }
