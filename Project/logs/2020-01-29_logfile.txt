@@ -1,2 +1,6 @@
 2020-01-29 00:14:22.5822 ERROR Something went wrong Invalid object name 'BucketList'.
 2020-01-29 00:31:51.1472 INFO Returned all Buckets available in DB
+2020-01-29 13:57:14.4539 INFO Returned all Buckets available in DB
+2020-01-29 13:59:54.6087 INFO Returned bucket with id: 9baafd3d-2a41-4b40-6049-08d7a4ba7b3f
+2020-01-29 14:25:16.3482 INFO return bucket with items for id: 9baafd3d-2a41-4b40-6049-08d7a4ba7b3f
+2020-01-29 15:11:05.6271 INFO Returned bucket with id: d0cdbf98-bd0e-4ef6-556a-08d7a4bf741a

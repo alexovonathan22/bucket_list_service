@@ -12,7 +12,7 @@ namespace Repository
         private IBucketListRepository _bucketList;
         private IItemRepository _item;
 
-        public IBucketListRepository BucketList
+        public IBucketListRepository BucketListWrapper
         {
             get
             {
@@ -25,7 +25,7 @@ namespace Repository
             }
         }
 
-        public IItemRepository Item
+        public IItemRepository ItemWrapper
         {
             get
             {
